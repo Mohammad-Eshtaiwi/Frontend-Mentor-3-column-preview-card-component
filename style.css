@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@400;700&display=swap');
+/* font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif; */
+/* basic reset */
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+html {
+    font-size: 10px;
+}
+
+
+
+
+/* variables */
+:root {
+    --heading-large-size: 2.8rem;
+    --heading-medium-size: 15rem;
+    --body-font-size: 1.5rem;
+    --rating-font-size: 1.5rem;
+
+    --primary-color: #666CA3;
+    --green: #004140;
+    --green-light: #19B89D;
+    --blue: #006971;
+    --blue-light: #26B5C0;
+    --orange: #E28625;
+    --orange-light: #FFD473;
+    --dark-blue: #13183F;
+    --grey: #87879D;
+    --lailake: #855FB1;
+    --lailake-o: #B18BDD;
+    --lailake-light: #D9B8FF;
+    --very-dark-blue: hsl(216, 12%, 8%);
+    --white: #fff;
+    --bg: #F2F2F2;
+    --dark: #004140;
+    --black: #000000;
+}
+
+
+
+/* basic */
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    background-color: var(--White);
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding-block: 6rem;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-size: 1.8rem;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+
+/* typography */
+
+/* paragraph */
+.paragraph-sm {
+    font-size: 1.6rem;
+}
+
+/* headings */
+.heading {
+    font-weight: 700;
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+
+h2.heading,
+h1.heading {
+    font-size: 4rem;
+    line-height: 4.7rem;
+    text-transform: capitalize;
+    color: var(--bg);
+}
+
+
+/* btn */
+
+.btn {
+    padding: 1.2rem 3.2rem;
+    border-radius: 29px;
+    transition: all .35s ease-in-out;
+    border: 0;
+    cursor: pointer;
+    background-color: var(--bg);
+    transition: all .35s ease-in-out;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--bg);
+    border: 2px solid var(--bg);
+}
+
+.btn--orange {
+    color: var(--orange);
+}
+
+.btn--blue {
+    color: var(--blue);
+}
+
+.btn--green {
+    color: var(--green);
+}
+
+
+
+/* common */
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* main */
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+}
+
+.grid__item {
+    border-radius: 8px;
+    padding: 4.4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grid__item button {
+    align-self: flex-start;
+}
+
+
+.grid__item:nth-of-type(1) {
+    background-color: var(--orange);
+}
+
+.grid__item:nth-of-type(2) {
+    transform: translateX(-1em);
+    background-color: var(--blue);
+}
+
+.grid__item:nth-of-type(3) {
+    background-color: var(--green);
+    transform: translateX(-2em);
+}
+
+main .container {
+    display: flex;
+    justify-content: center;
+    transform: translateX(1em);
+}
+
+main img {
+    margin-bottom: 3.5rem;
+}
+
+main h2,
+main h1 {
+    margin-bottom: 2.5rem;
+}
+
+main p {
+    margin-bottom: 8.3rem;
+}
+
+
+
+@media screen and (max-width : 1100px) {
+    body {
+        background-color: var(--green);
+    }
+
+    .grid {
+        display: block;
+    }
+
+    .grid__item:nth-of-type(2) {
+        transform: translateX(0);
+    }
+
+    .grid__item:nth-of-type(3) {
+        transform: translateX(0);
+    }
+
+    .grid__item:nth-of-type(2),
+    .grid__item:nth-of-type(3) {
+        transform: translateY(-1rem);
+    }
+
+    main .container {
+        transform: translateX(0);
+    }
+
+    main p {
+        margin-bottom: 2.5rem;
+    }
+}
